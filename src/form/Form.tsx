@@ -23,9 +23,15 @@ export default function Form(props: {
   onChange?: any
   formData?: InputHTMLAttributes<HTMLInputElement | HTMLSelectElement>[]
   submitTitle?: string
+  defaultValues: any
 }) {
-  const formHandler = useForm()
+  const formHandler = useForm({
+    defaultValues: props.defaultValues,
+  })
 
+  useEffect(() => {
+    formHandler.reset(props.defaultValues)
+  }, [formHandler.reset])
   return (
     <FormProvider {...formHandler}>
       <FormFrame onSubmission={props.onSubmission} onChange={props.onChange}>
