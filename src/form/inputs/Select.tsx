@@ -13,7 +13,7 @@ export default function Select({
   return (
     <>
       <label>{placeholder}</label>
-      <select {...props} {...(name && register(name))}>
+      <select {...(name && register(name))} {...props}>
         <option value="" disabled>
           {'Selectionner'}
         </option>
