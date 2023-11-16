@@ -22,7 +22,7 @@ export default function Form(props: {
     onChange?: any;
     formData?: InputHTMLAttributes<HTMLInputElement | HTMLSelectElement>[];
     submitTitle?: string;
-    defaultValues: any;
+    defaultValues?: any;
 }): import("react/jsx-runtime").JSX.Element;
 export declare function FormFrame(props: {
     children?: ReactNode;

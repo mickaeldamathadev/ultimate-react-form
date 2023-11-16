@@ -23,7 +23,7 @@ export default function Form(props: {
   onChange?: any
   formData?: InputHTMLAttributes<HTMLInputElement | HTMLSelectElement>[]
   submitTitle?: string
-  defaultValues: any
+  defaultValues?: any
 }) {
   const formHandler = useForm({
     defaultValues: props.defaultValues,
